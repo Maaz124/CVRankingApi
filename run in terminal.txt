@@ -1,0 +1,11 @@
+# install these req from terminal first
+
+# Install PyTorch first
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# Then install other dependencies
+pip install transformers
+pip install sentence-transformers
+
+# Finally install Django and other requirements
+pip install Django==5.0.1 djangorestframework==3.14.0 django-cors-headers==4.3.1
