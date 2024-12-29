@@ -12,3 +12,4 @@ sentence-transformers==2.2.2
 # Other utilities
 numpy==1.26.3
 python-dotenv==1.0.0
+
