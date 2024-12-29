@@ -1,0 +1,32 @@
+testing file run the code in therminal
+
+
+
+
+
+creating job 
+
+curl -X POST http://localhost:8000/api/jobs/ \
+     -H "Content-Type: application/json" \
+     -d '{
+           "title": "Senior Data Scientist",
+           "description": "Looking for expertise in Python, Machine Learning, and NLP"
+         }'
+
+
+
+creating candiatde // /CV
+
+curl -X POST http://localhost:8000/api/candidates/ \
+     -H "Content-Type: application/json" \
+     -d '{
+           "name": "John Doe",
+           "education": ["B.Sc. Computer Science", "M.Sc. Data Science"],
+           "skills": ["Python", "Machine Learning", "NLP", "SQL"],
+           "experience": ["Senior Data Scientist at XYZ Corp", "ML Engineer at ABC Tech"]
+         }'
+
+ranking cv
+
+
+curl -X POST http://localhost:8000/api/jobs/1/rank_candidates/
