@@ -1,0 +1,22 @@
+# Remove existing torch installation
+pip uninstall torch torchvision torchaudio -y
+
+# Install CUDA-enabled PyTorch
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118  # For CUDA 11.8
+# OR
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121  # For CUDA 12.1
+
+# Install other requirements
+pip install -r requirements.txt
+
+
+#then this 
+
+
+
+# Uninstall current packages
+pip uninstall sentence-transformers huggingface-hub
+
+# Install specific versions known to work together
+pip install huggingface-hub==0.16.4
+pip install sentence-transformers
