@@ -1,0 +1,15 @@
+# Base Django requirements
+Django==5.0.1
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+
+# GPU-enabled PyTorch and ML dependencies
+torch>=2.1.2
+torchvision>=0.16.2
+torchaudio>=2.1.2
+transformers==4.36.2
+sentence-transformers==2.2.2
+
+# Other utilities
+numpy==1.26.3
+python-dotenv==1.0.0

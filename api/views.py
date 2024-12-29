@@ -47,3 +47,13 @@ class JobPostingViewSet(viewsets.ModelViewSet):
 class CandidateViewSet(viewsets.ModelViewSet):
     queryset = Candidate.objects.all()
     serializer_class = CandidateSerializer
+
+
+# Add this to your views.py to see GPU memory usage
+def get_gpu_memory():
+    if torch.cuda.is_available():
+        return torch.cuda.memory_allocated() / 1024**2  # Memory in MB
+    return 0
+
+# Then in your rank_candidates view:
+print(f"GPU Memory used: {get_gpu_memory():.2f} MB")
