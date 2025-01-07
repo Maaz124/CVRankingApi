@@ -16,17 +16,55 @@ curl -X POST http://localhost:8000/api/jobs/ \
 
 
 creating candiatde // /CV
-
 curl -X POST http://localhost:8000/api/candidates/ \
      -H "Content-Type: application/json" \
      -d '{
-           "name": "John Doe",
-           "education": ["B.Sc. Computer Science", "M.Sc. Data Science"],
-           "skills": ["Python", "Machine Learning", "NLP", "SQL"],
-           "experience": ["Senior Data Scientist at XYZ Corp", "ML Engineer at ABC Tech"]
+           "name": "Leo Leopard",
+           "education": [
+             {
+               "university": "University of La Verne",
+               "location": "La Verne, CA",
+               "expected_graduation": "June 2016",
+               "degree": "Bachelor of Arts, Business Administration",
+               "gpa": "3.5",
+               "honors_awards": [
+                 "Dean'\''s List Fall 2013 - Spring 2014"
+               ]
+             }
+           ],
+           "experience": [
+             {
+               "organization": "Enactus, University of La Verne",
+               "start_date": "August 2013",
+               "end_date": "Present",
+               "role": "Member",
+               "description": "Implement collective ideas to sponsor campus and community events which promote educational and social change. Co-designed 17 minute audio-visual presentation accurately and creatively describing project for use in regional and national competition."
+             },
+             {
+               "organization": "LionLike MindState, Pomona, CA",
+               "start_date": "June 2012",
+               "end_date": "Present",
+               "role": "Volunteer",
+               "description": "Plan two yearly outreach events to highlight community members’ creativity in spoken word, poetry, music, and art."
+             },
+             {
+               "organization": "YMCA, Pomona, CA",
+               "start_date": "Summer 2013",
+               "end_date": "Summer 2014",
+               "role": "Volunteer",
+               "description": "Instructed classes of up to 15 children on basic swimming skills. Communicated regularly with parents on children’s progress."
+             }
+           ],
+           "skills": [
+             "Computer: Proficient in Windows and Mac OS, Microsoft Word, PowerPoint, and Excel",
+             "Language: Fluent in Spanish",
+             "Social Media: Facebook, Twitter, Instagram"
+           ]
          }'
 
 ranking cv
 
 
 curl -X POST http://localhost:8000/api/jobs/1/rank_candidates/
+
+curl -X POST https://turbo-broccoli-5wwwxj6r677cv4vv-8000.app.github.dev//api/jobs/1/rank_candidates/
